@@ -42,19 +42,22 @@ img {
     display: flex;
     flex-direction: column;
     width: 100%;
-    background-image: url(../image/sp_mainvisual.jpg);
+    background-image: url(/assets/image/sp_mainvisual.jpg);
     background-size: 100%;
     background-position: top left;
     width: 100%;
 }
 .header-container {
-    display: flex;
-    flex-direction: column;
-    margin: 0 1.6rem 0;
+    margin: 2.95rem 1.6rem 0;
 }
 .mainlogo {
-    padding-top: 2.95rem;
-    text-align: center;
+    width: 13.932rem;
+    height: 1.773rem;
+    margin-inline: auto;
+
+}
+.mainlogo img {
+  width: 100%;
 }
 .title {
     padding-left: .7rem;
@@ -136,7 +139,7 @@ img {
 
 /* 商品説明 */
 .description {
-    background-image: url(../image/sp_description.jpg);
+    background-image: url(/assets/image/sp_description.jpg);
     background-position: center;
     background-size: cover;
     max-width: 100%;
@@ -303,7 +306,6 @@ img {
 .accordion-inner span {
     width: 30.7rem;
 }
-
 .icon-down {
     display: block;
     width: 2.4rem;
@@ -313,7 +315,33 @@ img {
 .icon-down img {
     width: 1rem;
     height: .645rem;
+    transition: transform .6s;
 }
+.accordion-title.open
+.icon-down img {
+    transform: rotate( 180deg);
+}
+
+/* 上に戻るボタン */
+#page-top {
+    width: 4rem;
+    height: 4rem;
+    background-color: #0071CE;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 1.6rem;
+    bottom: 16.5rem;
+}
+.page-top-button-arrow {
+    width: 1.4rem;
+    height: 1.6rem;
+}
+.page-top-button-arrow img {
+    width: 100%;
+}
+
 
 /* フッター */
 .footer {
@@ -322,27 +350,40 @@ img {
     flex-direction: column;
     align-items: center;
 }
-.footer-body {
+.footer-container {
     display: flex;
     flex-direction: column;
     row-gap: 2.4rem;
     align-items: center;
     justify-content: space-between;
+    color: #fff;
+
 }
-.footer-body-logo {
+.footer-logo {
     padding-top: 2.4rem;
     text-align: center;
+    width: 16.254rem;
+    height: 2.069rem;
 }
-.footer-body-info {
+.footer-logo img {
+    width: 100%;
+
+}
+.footer-info {
     display: flex;
     list-style: none;
     column-gap: 3rem;
+    padding-top: 2.4rem;
+}
+.footer-info a {
     font-size: 1.2rem;
     font-weight: 400;
+    color: #fff;
 }
 .footer-copyright {
     font-size: 1.1rem;
     font-weight: 400;
+    color: #fff;
     padding: 2.5rem 0;
 }
 
