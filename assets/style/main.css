@@ -1,0 +1,361 @@
+@charset "UTF-8";
+
+html {
+    font-size: calc(10 * 100vw / 390); /* 390はSPデザインカンプの幅 */
+    /* 変換サイト・ツールなどで、 390pxの幅での10pxを変換して2.56vwなのでそれを当ててもよい */
+    /* font-size: 2.564102vw; */
+}
+
+@media (min-width:768px) {
+html {
+    font-size: calc(10 * 100vw / 1200); /* 1200はPCカンプのコンテンツ幅 */
+}
+}
+
+@media (min-width: 1200px) {
+html {
+    font-size: 62.5%; }
+}
+
+body {
+    font-family: "Noto Self JP",serif;
+    line-height: 1.75;
+    color: #000;
+}
+@media (min-width: 768px) {
+    body {
+    font-size: 1.6rem;
+    }
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* spヘッダー */
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-image: url(../image/sp_mainvisual.jpg);
+    background-size: 100%;
+    background-position: top left;
+    width: 100%;
+}
+.header-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 1.6rem 0;
+}
+.mainlogo {
+    padding-top: 2.95rem;
+    text-align: center;
+}
+.title {
+    padding-left: .7rem;
+    padding-top: 35.4rem;
+}
+.title h2 {
+    text-align: left;
+    font-family: Marcellus, serif;
+    font-weight: 300;
+    font-size: 4.1rem;
+    letter-spacing: 1.23rem;
+    line-height: 1.24;
+    padding-bottom: 0.6rem;
+}
+.title p {
+    font-size: 2rem;
+    letter-spacing: .6rem;
+}
+/* spボタンリスト */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 35.8rem;
+    height: 26.1rem;
+    background-color: #F0F4FF;
+    gap: 2rem;
+    align-items: center;
+    margin: 5rem auto 5rem;
+    padding-top: 2rem;
+}
+.button-container h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    letter-spacing: 0.18rem;
+    color: #111;
+}
+.button-container p {
+    font-size: 1.4rem;
+    font-weight: 400;
+    text-align: center;
+}
+.button-container p span {
+    padding-left: 1rem;
+}
+.button-shop,
+.button-cart {
+    box-sizing: border-box;
+    padding-top: 1rem;
+    width: 30rem;
+    height: 5.8rem;
+    border: 1rem;
+    border-radius: 3.4rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+    transition: .3s;
+    padding-top: 1.2rem;
+}
+.button-shop {
+    background: #46C4DB;
+    border: .2rem solid #46C4DB
+}
+.button-cart {
+    background: #5DD5AB;
+    border: .2rem solid #5DD5AB;
+}
+
+@media (min-width: 768px) {
+    .button-shop:hover {
+        color: #46C4DB;
+        background: #fff;
+    }
+    .button-cart:hover {
+        color: #5DD5AB;
+        background: #fff;
+    }
+}
+
+/* 商品説明 */
+.description {
+    background-image: url(../image/sp_description.jpg);
+    background-position: center;
+    background-size: cover;
+    max-width: 100%;
+    margin-inline: auto;
+    height: 68rem;
+}
+.description .container {
+    max-width: 35.8rem;
+    margin-inline: auto;
+    color: #fff;
+    padding-top: 4.8rem;
+}
+.description-title-english {
+    text-align: center;
+    font-family: "EB Garamond", self;
+    font-size: 3rem;
+    font-weight: 700;
+}
+.description-title-japanese {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 400;
+    padding-top: .5rem;
+}
+.description-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2.285;
+    padding-top: 1.8rem;
+}
+
+/* お客様の声 */
+.voices .container {
+    height: 57.1rem;
+}
+.voices-title-english {
+    text-align: center;
+    font-family: "EB Garamond", self;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: .15rem;
+    margin-top: 5rem;
+}
+.voices-title-japanese {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .08rem;
+    margin-top: -.4rem;
+    margin-bottom: 3.6rem;
+}
+.voices {
+    display: flex;
+    justify-content: center;
+}
+.carousel {
+    width: 28rem;
+    height: 34.4rem;
+    background-color: #DBF7F9;
+    text-align: center;
+}
+.item img {
+    padding: 2.8rem 0 .8rem;
+    margin-inline: auto;
+    width: 8rem;
+    height: auto;
+}
+.voices-customer {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: .07rem;
+}
+.item-text {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2;
+    padding: 2rem 1.5rem 0;
+    text-align: center;
+}
+
+.slick-prev,
+.slick-next {
+    width: 3.2rem;
+    height: 3.2rem;
+}
+.slick-prev {
+    left: -4rem;
+}
+.slick-next {
+    right: -4rem;
+}
+.slick-dots {
+    bottom: -3rem;
+}
+.slick-dotted {
+    margin-bottom: 5rem;
+}
+.slick-dots li button:before {
+    width: .9rem;
+    height: 9rem;
+    color: #EEEEEE;
+    font-size: .9rem;
+    opacity: 1;
+}
+.slick-dots li.slick-active button:before {
+    color: #00AFBF;
+    opacity: 1;
+}
+
+/* Q&A */
+.faq .container {
+    background: linear-gradient(to right,#F4FFE8,#C6F0FE);
+    padding-bottom: 3.2rem;
+}
+.faq-title-english {
+    text-align: center;
+    font-family: "EB Garamond", self;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: .15rem;
+    padding-top: 5rem;
+}
+.faq-title-japanese {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 600;
+    letter-spacing: .08rem;
+    margin-top: -.4rem;
+    margin-bottom: 3.6rem;
+}
+.accordion-container {
+    max-width: 35.8rem;
+    margin-inline: auto;
+    background-color: #fff;
+    margin-bottom: 2rem;
+}
+.accordion-title,
+.accordion-inner {
+    display: flex;
+}
+.accordion-inner {
+    display: none;
+}
+.accordion-title p,
+.accordion-inner p {
+    display: flex;
+    font-family: "EB Garamond", self;
+    font-weight: 500;
+    font-size: 1.6rem;
+    letter-spacing: .08rem;
+    padding: 2rem 0 1.6rem 2rem;
+}
+.accordion-title span,
+.accordion-inner span {
+    display: block;
+    font-family: "Noto Self JP",serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.86;
+    letter-spacing: 0;
+    width: 28.3rem;
+    padding: 0 0 1.2rem 3.3rem;
+}
+.accordion-inner span {
+    width: 30.7rem;
+}
+
+.icon-down {
+    display: block;
+    width: 2.4rem;
+    padding-top: 2.5rem;
+    text-align: right
+}
+.icon-down img {
+    width: 1rem;
+    height: .645rem;
+}
+
+/* フッター */
+.footer {
+    background-color: #0071CE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer-body {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2.4rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.footer-body-logo {
+    padding-top: 2.4rem;
+    text-align: center;
+}
+.footer-body-info {
+    display: flex;
+    list-style: none;
+    column-gap: 3rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+.footer-copyright {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 2.5rem 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
