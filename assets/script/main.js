@@ -2,7 +2,7 @@ $(document).ready(function(){
 	$('.carousel').slick({
 		autoplay: false, // 自動再生
 		autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
-        slidesToShow:1,
+        slidesToShow:3,
         slidesToScroll:1,
 		arrows: true, // 左右のナビゲーションを無効にする
 		dots: true, // スライド下にドットを表示する

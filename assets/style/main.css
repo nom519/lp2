@@ -261,6 +261,9 @@ img {
 /* sp お客様の声 */
 .voices .container {
     height: 57.1rem;
+    width: 28rem;
+    margin-inline: auto;
+
 }
 .voices-title-english {
     text-align: center;
@@ -278,23 +281,22 @@ img {
     margin-top: -.4rem;
     margin-bottom: 3.6rem;
 }
-.voices {
-    display: flex;
-    justify-content: center;
-}
-.carousel {
-    width: 28rem;
+.item-container {
     height: 34.4rem;
     background-color: #DBF7F9;
     text-align: center;
 }
-.item img {
-    padding: 2.8rem 0 .8rem;
-    margin-inline: auto;
+.item-customer {
     width: 8rem;
     height: auto;
+    margin-inline: auto;
+    padding: 2.8rem 0 .8rem;
 }
-.voices-customer {
+.item-customer img {
+    width: 100%;
+    height: auto;
+}
+.item-customer-name {
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: .07rem;
@@ -303,7 +305,7 @@ img {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 2;
-    padding: 2rem 1.5rem 0;
+    padding: 2rem 1.5rem 2.8rem;
     text-align: left;
 }
 
@@ -311,6 +313,11 @@ img {
 .slick-next {
     width: 3.2rem;
     height: 3.2rem;
+}
+.slick-prev img,
+.slick-next img {
+    width: 100%;
+    height: auto;
 }
 .slick-prev {
     left: -4rem;
@@ -343,7 +350,7 @@ img {
 @media (min-width: 768px) {
     .voices .container {
         height: 71.6rem;
-        max-width: 120rem;
+        width: 115.6rem;
     }
     .voices-title-english {
         font-size: 4.5rem;
@@ -358,18 +365,16 @@ img {
         margin-top: -.4rem;
         margin-bottom: 4rem;
     }
-    .carousel {
+    .item-container {
         width: 30rem;
         height: 38.8rem;
     }
-
-    .item img {
-        padding: 4rem 0 .8rem;
-        margin-inline: auto;
+    .item-customer {
         width: 10rem;
         height: auto;
+        padding: 4rem 0 .8rem;
     }
-    .voices-customer {
+    .item-customer-name {
         font-size: 1.5rem;
         font-weight: 400;
         letter-spacing: .075rem;
@@ -458,6 +463,70 @@ img {
 
 /* pc Q&A */
 @media (min-width: 768px) {
+    .faq .container {
+        padding-bottom: 4rem;
+    }
+    .faq-title-english {
+        font-size: 4.5rem;
+        font-weight: 700;
+        letter-spacing: .225rem;
+        padding-top: 4rem;
+    }
+    .faq-title-japanese {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        margin-top: -.4rem;
+        margin-bottom: 4rem;
+    }
+    .accordion-container {
+        max-width: 60rem;
+        margin-inline: auto;
+        background-color: #fff;
+        margin-bottom: 2.4rem;
+    }
+    .accordion-title,
+    .accordion-inner {
+        display: flex;
+    }
+    .accordion-inner {
+        display: none;
+    }
+    .accordion-title p,
+    .accordion-inner p {
+        font-weight: 500;
+        font-size: 1.8rem;
+        letter-spacing: .09rem;
+        padding: 2.4rem 0 2.4rem 2.4rem;
+    }
+    .accordion-title span,
+    .accordion-inner span {
+        width: 49.1rem;
+        padding: 0 0 1.2rem 1rem;
+    }
+    .accordion-inner span {
+        width: 51.8rem;
+    }
+    .icon-down {
+        display: block;
+        width: 2.4rem;
+        padding-top: 2.5rem;
+        text-align: right
+    }
+    .icon-down img {
+        width: 1.2rem;
+        height: .774rem;
+        transition: transform .6s;
+    }
+    .accordion-title.open
+    .icon-down img {
+        transform: rotate( 180deg);
+    }
+    .slick-prev,
+    .slick-next {
+        width: 4.8rem;
+        height: 4.8rem;
+}
 
 }
 
@@ -470,7 +539,7 @@ img {
     justify-content: center;
     align-items: center;
     position: fixed;
-    right: 1.6rem;
+    right: 4.1%;
     bottom: 16.5rem;
     cursor: pointer;
 }
@@ -478,24 +547,26 @@ img {
     width: 1.4rem;
     height: 1.6rem;
 }
-.pagetop-button-arrow img {
-    width: 100%;
-}
+
+
+
+
 
 /* pc 上に戻るボタン */
 @media (min-width: 768px) {
-
+    #page-top {
+        bottom: 10.4rem;
+        right: 10%;
+    }
 }
 
 /* sp フッター */
 .footer {
     height: 16.5rem;
     background-color: #0071CE;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .footer-container {
+
     display: flex;
     flex-direction: column;
     row-gap: 2.4rem;
@@ -529,11 +600,57 @@ img {
     font-size: 1.1rem;
     font-weight: 400;
     color: #fff;
-    padding: 2.5rem 0;
+    padding-bottom: 2.5rem;
 }
 
 /* pc フッター */
 @media (min-width: 768px) {
+    .footer {
+        height: 10.4rem;
+    }
+    .footer-container {
+        max-width: 120rem;
+        margin-inline: auto;
+        display: flex;
+        flex-direction: row;
+        column-gap: 3.2rem;
+        padding: 0 3.42rem;
+
+
+    }
+    .footer-logo {
+        padding-top: 0;
+        text-align: left;
+        width: 16.254rem;
+        height: 2.069rem;
+    }
+
+
+
+
+    .footer-logo img {
+        content: url(/assets/image/pc_footer_logo.svg);
+        width: 100%;
+
+    }
+    .footer-info {
+        column-gap: 3.2rem;
+        padding-top: 0;
+
+    }
+    .footer-info a {
+        font-size: 1.4rem;
+        font-weight: 400;
+        color: #fff;
+    }
+    .footer-copyright {
+        font-size: 1.2rem;
+        font-weight: 400;
+        color: #fff;
+        padding: 4.5rem 0;
+    }
+
+
 
 }
 
