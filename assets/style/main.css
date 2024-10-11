@@ -37,7 +37,7 @@ img {
     height: auto;
 }
 
-/* spヘッダー */
+/* sp ヘッダー */
 .header {
     display: flex;
     flex-direction: column;
@@ -45,7 +45,6 @@ img {
     background-image: url(/assets/image/sp_mainvisual.jpg);
     background-size: 100%;
     background-position: top left;
-    width: 100%;
 }
 .header-container {
     margin: 2.95rem 1.6rem 0;
@@ -54,10 +53,9 @@ img {
     width: 13.932rem;
     height: 1.773rem;
     margin-inline: auto;
-
 }
 .mainlogo img {
-  width: 100%;
+    width: 100%;
 }
 .title {
     padding-left: .7rem;
@@ -66,7 +64,7 @@ img {
 .title h2 {
     text-align: left;
     font-family: Marcellus, serif;
-    font-weight: 300;
+    font-weight: 400;
     font-size: 4.1rem;
     letter-spacing: 1.23rem;
     line-height: 1.24;
@@ -76,7 +74,39 @@ img {
     font-size: 2rem;
     letter-spacing: .6rem;
 }
-/* spボタンリスト */
+/* pc ヘッダー */
+@media (min-width: 768px) {
+    .header {
+        background-image: url(/assets/image/pc_mainvisual.jpg);
+        background-size: cover;
+        height: 72rem;
+        background-position: center;
+    }
+    .header-container {
+        max-width: 120rem;
+        margin: 3.2rem 7.3rem 0;
+    }
+    .mainlogo {
+        content: url(/assets/image/pc_header_mainlogo.svg);
+        width: 16.254rem;
+        height: 2.069rem;
+    }
+    .title {
+        padding-top: 27.2rem;
+    }
+    .title h2 {
+        font-size: 5rem;
+        letter-spacing: 1.5rem;
+        line-height: 1.36;
+        padding-bottom: 0.1rem;
+    }
+    .title p {
+        font-size: 2.5rem;
+        letter-spacing: 0.75rem;
+    }
+}
+
+/* sp ボタンリスト */
 .button-container {
     display: flex;
     flex-direction: column;
@@ -125,8 +155,33 @@ img {
     background: #5DD5AB;
     border: .2rem solid #5DD5AB;
 }
-
+/* pc ボタンリスト */
 @media (min-width: 768px) {
+    .button-container {
+        display: flex;
+        flex-direction: row;
+        max-width: 100rem;
+        height: 14.6rem;
+        margin: 4.8rem auto;
+        padding: 0 4.8rem 0;
+    }
+    .button-container h3 {
+        font-size: 2.4rem;
+        letter-spacing: 0.24rem;
+    }
+    .button-container p {
+        font-size: 1.6rem;
+        font-weight: 400;
+        text-align: left;
+    }
+
+    .button-shop {
+        margin-left: 3.2rem;
+    }
+    .button-cart {
+        margin-left: 1.2rem;
+    }
+
     .button-shop:hover {
         color: #46C4DB;
         background: #fff;
@@ -137,7 +192,7 @@ img {
     }
 }
 
-/* 商品説明 */
+/* sp 商品説明 */
 .description {
     background-image: url(/assets/image/sp_description.jpg);
     background-position: center;
@@ -146,7 +201,7 @@ img {
     margin-inline: auto;
     height: 68rem;
 }
-.description .container {
+.description-title {
     max-width: 35.8rem;
     margin-inline: auto;
     color: #fff;
@@ -171,7 +226,39 @@ img {
     padding-top: 1.8rem;
 }
 
-/* お客様の声 */
+/* pc 商品説明 */
+@media (min-width: 768px) {
+    .description {
+        background-image: url(/assets/image/pc_description.jpg);
+        height: 55rem;
+
+    }
+    .description .container {
+        max-width: 120rem;
+        margin-inline: auto;
+    }
+    .description-title {
+        max-width: 42.9rem;
+        margin: 0 9.2rem 0 auto;
+        padding-top: 12.7rem;
+    }
+    .description-title-english {
+        text-align: left;
+        font-family: "EB Garamond", self;
+        font-size: 3.8rem;
+        font-weight: 700;
+    }
+    .description-title-japanese {
+        text-align: left;
+        font-size: 2.4rem;
+        padding-top: .8rem;
+    }
+    .description-text {
+        padding-top: 2.4rem;
+    }
+}
+
+/* sp お客様の声 */
 .voices .container {
     height: 57.1rem;
 }
@@ -217,7 +304,7 @@ img {
     font-weight: 400;
     line-height: 2;
     padding: 2rem 1.5rem 0;
-    text-align: center;
+    text-align: left;
 }
 
 .slick-prev,
@@ -239,7 +326,7 @@ img {
 }
 .slick-dots li button:before {
     width: .9rem;
-    height: 9rem;
+    height: .9rem;
     color: #EEEEEE;
     font-size: .9rem;
     opacity: 1;
@@ -248,8 +335,55 @@ img {
     color: #00AFBF;
     opacity: 1;
 }
+.slick-dots li {
+    margin: 0;
+}
 
-/* Q&A */
+/* pc お客様の声 */
+@media (min-width: 768px) {
+    .voices .container {
+        height: 71.6rem;
+        max-width: 120rem;
+    }
+    .voices-title-english {
+        font-size: 4.5rem;
+        font-weight: 700;
+        letter-spacing: .225rem;
+        margin-top: 8rem;
+    }
+    .voices-title-japanese {
+        font-size: 2rem;
+        font-weight: 600;
+        letter-spacing: .1rem;
+        margin-top: -.4rem;
+        margin-bottom: 4rem;
+    }
+    .carousel {
+        width: 30rem;
+        height: 38.8rem;
+    }
+
+    .item img {
+        padding: 4rem 0 .8rem;
+        margin-inline: auto;
+        width: 10rem;
+        height: auto;
+    }
+    .voices-customer {
+        font-size: 1.5rem;
+        font-weight: 400;
+        letter-spacing: .075rem;
+    }
+    .item-text {
+        font-size: 1.4rem;
+        font-weight: 400;
+        padding: 1.6rem 1.6rem 4rem;
+        text-align: left;
+    }
+
+}
+
+/* sp Q&A */
 .faq .container {
     background: linear-gradient(to right,#F4FFE8,#C6F0FE);
     padding-bottom: 3.2rem;
@@ -301,7 +435,7 @@ img {
     line-height: 1.86;
     letter-spacing: 0;
     width: 28.3rem;
-    padding: 0 0 1.2rem 3.3rem;
+    padding: 0 0 1.2rem 1rem;
 }
 .accordion-inner span {
     width: 30.7rem;
@@ -322,7 +456,12 @@ img {
     transform: rotate( 180deg);
 }
 
-/* 上に戻るボタン */
+/* pc Q&A */
+@media (min-width: 768px) {
+
+}
+
+/* sp 上に戻るボタン */
 #page-top {
     width: 4rem;
     height: 4rem;
@@ -333,18 +472,24 @@ img {
     position: fixed;
     right: 1.6rem;
     bottom: 16.5rem;
+    cursor: pointer;
 }
-.page-top-button-arrow {
+.pagetop-button-arrow {
     width: 1.4rem;
     height: 1.6rem;
 }
-.page-top-button-arrow img {
+.pagetop-button-arrow img {
     width: 100%;
 }
 
+/* pc 上に戻るボタン */
+@media (min-width: 768px) {
 
-/* フッター */
+}
+
+/* sp フッター */
 .footer {
+    height: 16.5rem;
     background-color: #0071CE;
     display: flex;
     flex-direction: column;
@@ -387,6 +532,10 @@ img {
     padding: 2.5rem 0;
 }
 
+/* pc フッター */
+@media (min-width: 768px) {
+
+}
 
 
 
