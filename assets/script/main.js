@@ -1,16 +1,15 @@
 $(document).ready(function(){
 	$('.carousel').slick({
-		autoplay: false, // 自動再生
-		autoplaySpeed: 5000, // 自動再生の速さ、単位はミリ秒
+		autoplay: false,
+		autoplaySpeed: 5000,
         infinite: true,
         slidesToShow: 3,
         slidesToScroll: 3,
-		arrows: true, // 左右のナビゲーションを無効にする
-		dots: true, // スライド下にドットを表示する
-		fade: false, // スライドの切り替えをフェードにする
+		arrows: true,
+		dots: true,
+		fade: false,
         prevArrow: '<button type="button" class="slick-prev"><img src="/assets/image/arrow-left-circle-fill.svg" alt="" class="prev-arrow"></button>',
         nextArrow: '<button type="button" class="slick-next"><img src="/assets/image/arrow-right-circle-fill.svg" alt="" class="next-arrow"></button>',
-
         responsive:[{
             breakpoint:768,
             settings:{

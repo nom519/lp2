@@ -1,14 +1,12 @@
 @charset "UTF-8";
 
 html {
-    font-size: calc(10 * 100vw / 390); /* 390はSPデザインカンプの幅 */
-    /* 変換サイト・ツールなどで、 390pxの幅での10pxを変換して2.56vwなのでそれを当ててもよい */
-    /* font-size: 2.564102vw; */
+    font-size: calc(10 * 100vw / 390);
 }
 
 @media (min-width:768px) {
 html {
-    font-size: calc(10 * 100vw / 1200); /* 1200はPCカンプのコンテンツ幅 */
+    font-size: calc(10 * 100vw / 1200);
 }
 }
 
@@ -290,7 +288,7 @@ img {
     width: 8rem;
     height: auto;
     margin-inline: auto;
-    padding-top: 2.8rem;
+    padding-top: 3rem;
 }
 .item-customer img {
     width: 100%;
@@ -300,13 +298,13 @@ img {
     font-size: 1.4rem;
     font-weight: 400;
     letter-spacing: .07rem;
-    padding-top: .7rem;
+    padding-top: .5rem;
 }
 .item-text {
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 2;
-    padding: 1.4rem 1.5rem 2.8rem;
+    padding: 1.4rem 1.5rem 3rem;
     text-align: left;
 }
 .slick-prev,
@@ -373,8 +371,7 @@ img {
     }
     .carousel {
         display: flex;
-        width: 100%;
-        max-width: 80%;
+        max-width: 102rem;
         margin: auto;
     }
     .item-container {
@@ -382,9 +379,7 @@ img {
         height: 38.8rem;
         margin: 0 2rem 0;
     }
-    .item-container slick-slide slick-active {
-        width: 30rem;
-    }
+
     .item-customer {
         width: 10rem;
         height: auto;
@@ -394,18 +389,27 @@ img {
         font-size: 1.5rem;
         font-weight: 400;
         letter-spacing: .075rem;
+        padding-top: 0;
+        line-height: 1;
     }
     .item-text {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
         font-weight: 400;
+        line-height: 1.75;
         padding: 1.6rem 1.6rem 4rem;
         text-align: left;
     }
     .slick-prev {
-        left: -8rem;
+        left: -6.9rem;
+        top: 44%;
     }
     .slick-next {
-        right: -8rem;
+        right: -6.9rem;
+        top: 44%;
+    }
+    .slick-dots {
+        bottom: -3.6rem;
+        left: .3rem;
     }
 }
 
@@ -444,7 +448,6 @@ img {
 .accordion-inner {
     display: none;
 }
-
 .accordion-title p {
     display: flex;
     font-family: "EB Garamond", self;
@@ -494,7 +497,7 @@ img {
 /* pc Q&A */
 @media (min-width: 768px) {
     .faq .container {
-        padding-bottom: 1rem;
+        padding-bottom: 1.3rem;
     }
     .faq-title-english {
         font-size: 4.5rem;
@@ -532,7 +535,7 @@ img {
         font-weight: 500;
         font-size: 1.8rem;
         letter-spacing: .09rem;
-        padding: 0 0 1rem 2.4rem;
+        padding: 0 0 .7rem 2.4rem;
     }
     .accordion-title span {
         width: 52rem;
@@ -593,7 +596,6 @@ img {
         right: 15rem;
         padding-top: .9rem;
     }
-
 }
 
 /* sp フッター */
@@ -606,7 +608,6 @@ img {
     align-items: center;
     justify-content: space-between;
     color: #fff;
-
 }
 .footer-logo {
     text-align: center;
@@ -616,7 +617,6 @@ img {
 }
 .footer-logo img {
     width: 100%;
-
 }
 .footer-info {
     display: flex;
